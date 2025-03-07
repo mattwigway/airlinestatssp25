@@ -1,0 +1,6 @@
+^renv$
+^renv\.lock$
+^airlinestatssp25\.Rproj$
+^\.Rproj\.user$
+calculate.R
+hubs.R
