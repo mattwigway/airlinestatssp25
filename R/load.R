@@ -1,3 +1,11 @@
+#' Load data from a data file, and supplemental files for city and carrier.
+#'
+#' @param datafile data to load
+#' @param cityfile City ID to name mapping
+#' @param carrierfile Carrier ID to name mapping
+#'
+#' @returns loaded and joined data
+#'
 #' @export
 load_data = function (datafile, cityfile, carrierfile) {
   # first, we need to load the data

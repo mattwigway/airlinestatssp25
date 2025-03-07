@@ -1,3 +1,13 @@
+#' Find busiest air routes.
+#'
+#' This finds the busiest (bidirectional) air routes in the country.
+#'
+#' @param dataframe data with flight records (disaggregate)
+#' @param origcol column identifying origin airport or city
+#' @param destcol column identifying destination city or airport
+#'
+#' @returns sorted list of busiest routes
+#'
 #' @export
 busiest_routes = function (dataframe, origcol, destcol) {
   stopifnot(all(dataframe$Passengers >= 1))
@@ -23,6 +33,14 @@ busiest_routes = function (dataframe, origcol, destcol) {
   return(arrange(pairs, -Passengers))
 }
 
+#' Find market shares.
+#'
+#' @param dataframe data with airline tickets
+#' @param origcol origin city or airport
+#' @param carriercol air carrier
+#'
+#' @returns data frame of market shares by airport and carrier
+#'
 #' @export
 market_shares = function (dataframe, origcol, carriercol) {
   # Now, we can compute the market shares
