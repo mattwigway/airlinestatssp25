@@ -1,0 +1,35 @@
+---
+title: "Airline statistics"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Airline statistics}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+This is an introduction to the airlinestats package.
+
+## Loading data
+
+
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(airlinestatssp25)
+```
+
+```{r}
+data = dplyr::tibble(
+    Origin=c("RDU", "RDU", "CLT", "CLT", "CLT"),
+    OperatingCarrierName = c("Southwest", "Delta", "American", "American", "Piedmont"),
+    Passengers=rep(1, 5)
+)
+
+market_shares(data, Origin, OperatingCarrierName)
+```

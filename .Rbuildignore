@@ -4,3 +4,5 @@
 ^\.Rproj\.user$
 calculate.R
 hubs.R
+^\.github$
+^LICENSE\.md$
